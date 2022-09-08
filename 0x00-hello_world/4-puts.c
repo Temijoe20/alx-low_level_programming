@@ -1,11 +1,13 @@
 #include <studio.h>
 /**
- *main- Serves the entry point for the program
+ * main - print the string in the put function
  *
- *Return: By default returns zero if no erros otherwise returns non-zero value.
+ * Description: using the main function
+ * this programs prints "programming is like building a multilingual puzzle
+ * Return: 0
  */
-int main (void)
+int main(void)
 {
- puts("\"Programming is like building a multilingual puzzle");
-  return (0);
-} 
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
+}
