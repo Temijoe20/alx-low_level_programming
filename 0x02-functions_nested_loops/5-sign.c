@@ -4,8 +4,7 @@
  * @n: is the int that will use for the argument of the function
  * Return: 0
  */
-
-int print_sign(int n)
+int main(void)
 {
 	if (n > 0)
 	{
