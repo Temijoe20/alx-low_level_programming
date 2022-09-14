@@ -19,5 +19,5 @@ sum += n1;
 
 }
 printf("%ld\n", sum);
-retutn (0);
+return (0);
 }
