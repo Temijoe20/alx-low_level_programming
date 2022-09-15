@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long int i, j, k, j1, j2, k1, k2;
+	unsigned long int (i, j, k, j1, j2, k1, k2;)
 	j = 1;
 	k = 2;
 
@@ -20,11 +20,10 @@ int main(void)
 		j = k - j;
 	}
 	}
-	
-	j1 = j / 1000000000;
-	j2 = j % 1000000000;
-	k1 = k / 1000000000;
-	k2 = k % 1000000000;
+	int j1 = j / 1000000000;
+	int j2 = j % 1000000000;
+	int k1 = k / 1000000000;
+	int k2 = k % 1000000000;
 
 	for (i = 92; i < 99; ++i)
 	{
