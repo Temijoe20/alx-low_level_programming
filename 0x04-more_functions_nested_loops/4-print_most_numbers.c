@@ -7,7 +7,7 @@
  * Return: returns nothing
  */
 
-void print_most _numbers(void)
+void print_most_numbers(void)
 {
 	int n;
 
