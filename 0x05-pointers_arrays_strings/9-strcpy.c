@@ -1,6 +1,6 @@
-_strcpy - copy paste string
-*edest: destination
-@src: source
+_strcp - copy paste string
+* @dest: destination
+* @src: source
 *
 * Return: destination
 */
