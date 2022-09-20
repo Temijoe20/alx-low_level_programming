@@ -1,20 +1,22 @@
-_strcp - copy paste string
-* @dest: destination
-* @src: source
-*
-* Return: destination
-*/
+#include "main.h"
+
+/**
+ * *_strcpy - copies the striingointed to by src
+ * @dest: char type string
+ * @src: char type string
+ * Description: Copy the string pointed to by pointer `src` to
+ * the b uffer pointed to by`dest`
+ * Return: pointer to `dest
+ */
 
 char *_strcpy(char *dest, char *src)
 {
-		int inc = 0;
+	int i = -1;
 
-		while (*(src + inc) != '\0')
-		{
-			*(dest + inc) = *(src + inc);
-			inc++;
-		}
-		*(dest + inc) = '\0';
+	do {
+		i++;
+		dest[i] = src[i];
+	} while (src[i] != '\0');
 
-		return (dest);
+	return (dest);
 }
