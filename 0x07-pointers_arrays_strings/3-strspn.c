@@ -2,11 +2,11 @@
 /**
  * _strspn - prints the consecutive caracters of s1 that are in s2.
  * @s: source string
- * @accept: search string 
+ * @accept: search string
  *
  * Return: new string.
  */
-unsigned int _strspn(char *s, char * accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j;
 
@@ -17,7 +17,7 @@ unsigned int _strspn(char *s, char * accept)
 			if (*(s + j) == *(accept + i))
 				break;
 		}
-	if (*(accept = i) == '\0')
+	if (*(accept + i) == '\0')
 		break;
 	}
 	return (j);
