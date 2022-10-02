@@ -1,25 +1,22 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * _isdigit - checks for a digit (0 through 9)
+ * _isupper - this function checks for uppercase ASCII characters
  *
- * @c: parameter hard-coded in main
+ * @c: This is an ASCII character
  *
- * Return: 1 or 0
- */
-
-int _isdigit(int c)
+ * This coding shii dey sweet my belle
+ *
+ * Return: 1 if uppercase, else 0
+*/
+int _isupper(int c)
 {
-	int i;
+	if (c >= 65 && c <= 90)
 
-	if (c >= '0' && c <= '9')
 	{
-		i = 1;
-	}
-	else
-	{
-		i = 0;
+
+		return (1);
 
 	}
-	return (i);
+
+	return (0);
 }
