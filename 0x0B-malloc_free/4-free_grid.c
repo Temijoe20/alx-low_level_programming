@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- * free_grid - free up a 2d grid
- * @grid: double pointer 2d grid
- * @height: height of grid
+ * free_grid - frees up the memory by an already exixting grid
+ * @grid: Grid we want to free from memory
+ * @height: Height of the grid
+ *
+ * Return: nothing
  */
-
 void free_grid(int **grid, int height)
 {
 	int i;
