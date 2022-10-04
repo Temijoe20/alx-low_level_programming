@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees up the memory by an already exixting grid
+ * free_grid - frees up the memory allocated by an already existing grid
  * @grid: Grid we want to free from memory
  * @height: Height of the grid
  *
