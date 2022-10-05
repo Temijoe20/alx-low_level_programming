@@ -1,59 +1,34 @@
 #include "main.h"
 #include <stdlib.h>
 
-unsigned int get_length(char *s);
-
 /**
- * _strdup - copies the contents of a string to another location in memory
- * @str: String to copy
+ * _strdup - Returns a pointer to a newly-allocated space in memory
+ *		containing a copy of the string given as parameter.
+ * @str: The string to be copied.
  *
- * Return: 0 or Ptr
+ * Return: If str == NULL or insufficient memory is available - NULL.
+ *		Otherwise - a pointer to the duplicated string.
  */
 char *_strdup(char *str)
 {
-	char *ptr;
-	unsigned int i;
-	unsigned int size;
+	char *duplicate;
+	int index, len = 0;
 
-	if (str == 0)
-	{
-		return (0);
-	}
+	if (str == NULL)
+		return (NULL);
 
-	size = get_length(str);
-	ptr = (char *) malloc((sizeof(char) * size) + 1);
-	if (ptr == 0)
-	{
-		return (0);
-	}
+	for (index = 0; str[index]; index++)
+		len++;
 
-	for (i = 0; i < size; i++)
-	{
-		ptr[i] = str[i];
-	}
-	ptr[size] = '\0';
+	duplicate = malloc(sizeof(char) * (len + 1));
 
-	return (ptr);
-}
+	if (duplicate == NULL)
+		return (NULL);
 
-/**
- * get_length - returns the length of the string
- * @s: string parameter
- *
- * Return: length of s
- */
-unsigned int get_length(char *s)
-{
-	unsigned int length;
-	unsigned int i;
+	for (index = 0; str[index]; index++)
+		duplicate[index] = str[index];
 
-	i = 0;
-	length = 0;
-	while (s[i] != '\0')
-	{
-		length++;
-		i++;
-	}
+	duplicate[len] = '\0';
 
-	return (length);
+	return (duplicate);
 }
