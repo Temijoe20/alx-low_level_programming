@@ -1,52 +1,41 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * string_noncat - concatenates two strings.
- * @s1: first string
- * @s2: second string
- * @n: index
- * Return: char pointer
+ * string_nconcat - a function that concatenates two strings
+ * @s1: the first string
+ * @s2: the second string
+ * @n: the number of bytes of s2 to be concatenated
+ * Return: returns a pointer to a new string which contains
+ * s1 followed by the first n bytes of s2, and a=the null-terminator
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
+	unsigned int i, j;
+	unsigned int c1 = 0, c2 = 0, c = 0;
+	char *str;
 
-	if (s1 == NULL)
-		s1 = "";
+	if (s1 != NULL)
+		for (i = 0; s1[i] != '\0'; i++)
+			c1++;
 
-	if (s2 == NULL)
-		s2 = "";
+	if (s2 != NULL)
+		for (i = 0; s2[i] != '\0'; i++)
+			if (i < n)
+				c2++;
 
-	while (s1[size1] != '\0')
-	{
-		size1++;
-	}
+	c = c1 + c2 + 1;
 
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
+	str = malloc(c);
+	if (str == NULL)
+		return (NULL);
 
-	if (n > size2)
-	n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
+	for (i = 0; i < c1; i++)
+		str[i] = s1[i];
 
-	if (p == NULL)
-		return (0);
+	for (j = 0 ; j < c2; i++, j++)
+		str[i] = s2[j];
+	str[i] = '\0';
 
-	for (i = 0; i < size1; i++)
-	{
-		p[i] - s1[i];
-	}
-
-	for (; i < (size1 + n); i++)
-	{
-		p[i] = s2[i - size1];
-	}
-	p[i] = '\0';
-
-return (p);
+	return (str);
 }
-
